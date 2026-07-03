@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Paris — per i diciott'anni di Adiel · 5–8 novembre 2026</title>
+<meta name="description" content="Un viaggio a Parigi per i diciott'anni di Adiel. Le basi: dove andiamo, il volo, l'hotel e come ci muoviamo.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+/* ============ TOKENS ============ */
+:root{
+  --night:#0b1530; --night-2:#070d20; --night-3:#050a19;
+  --gold:#c9a24b; --gold-2:#e6cf8a; --gold-soft:rgba(201,162,75,.30); --gold-hair:rgba(201,162,75,.22);
+  --cream:#f3ecdf; --muted:#a9b6cf; --muted-2:#7c8aa8;
+  --serif:"Cormorant Garamond",Georgia,"Times New Roman",serif;
+  --sans:"Inter",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  --ease:cubic-bezier(.16,1,.3,1);
+  --pad:clamp(1.6rem,5.2vw,5.5rem);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--night-2);color:var(--cream);
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden;line-height:1.6}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+
+/* ============ OVERLAYS ============ */
+.progress{position:fixed;top:0;left:0;height:2px;width:0%;background:linear-gradient(90deg,var(--gold),var(--gold-2));
+  z-index:120;transition:width .12s linear;box-shadow:0 0 12px rgba(201,162,75,.5)}
+.vignette{position:fixed;inset:0;pointer-events:none;z-index:80;
+  background:radial-gradient(130% 100% at 50% 42%,transparent 55%,rgba(4,8,20,.55) 100%);mix-blend-mode:multiply}
+.grain{position:fixed;inset:0;pointer-events:none;z-index:81;opacity:.05;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+/* ============ SIDE INDEX ============ */
+.index{position:fixed;top:50%;right:clamp(14px,1.8vw,30px);transform:translateY(-50%);
+  z-index:90;display:flex;flex-direction:column;gap:.62rem;padding-left:1.05rem}
+.index::before{content:"";position:absolute;left:0;top:6px;bottom:6px;width:1px;
+  background:linear-gradient(var(--gold-hair),transparent 12% 88%,var(--gold-hair))}
+.index a{display:flex;align-items:baseline;gap:.6em;font-size:.66rem;letter-spacing:.12em;color:var(--muted-2);
+  text-transform:uppercase;font-weight:500;transition:color .5s var(--ease),transform .5s var(--ease);
+  text-shadow:0 1px 3px rgba(4,8,20,.85)}
+.index a .n{font-variant-numeric:tabular-nums;color:var(--muted);transition:color .5s var(--ease)}
+.index a .nm{opacity:0;max-width:0;overflow:hidden;white-space:nowrap;
+  transition:opacity .5s var(--ease),max-width .6s var(--ease);border-left:1px solid var(--gold-hair);padding-left:0}
+.index a:hover{color:var(--cream)}
+.index a.active{color:var(--gold-2)}.index a.active .n{color:var(--gold-2)}
+.index a.active,.index a:hover{transform:translateX(-3px)}
+.index a.active .nm,.index a:hover .nm{opacity:1;max-width:180px;padding-left:.7em}
+.index a.active .nm{color:var(--gold-2)}
+
+/* ============ SPLIT ============ */
+.split{display:grid;grid-template-columns:1fr 1fr;min-height:100vh;min-height:100svh;position:relative}
+.split.rev .photo{order:2}.split.rev .text{order:1}
+.pane{position:relative;overflow:hidden}
+.photo{background:var(--night-3)}
+.photo .kb{position:absolute;inset:-7%;background-image:var(--img);background-size:cover;background-position:var(--pos,center);
+  will-change:transform;animation:kbA 24s var(--ease) infinite alternate}
+.kb-b .kb{animation-name:kbB;animation-duration:26s}.kb-c .kb{animation-name:kbC;animation-duration:23s}
+@keyframes kbA{from{transform:scale(1.05) translate(0,0)}to{transform:scale(1.17) translate(-1.6%,-1.4%)}}
+@keyframes kbB{from{transform:scale(1.16) translate(-1.4%,1.2%)}to{transform:scale(1.05) translate(0,0)}}
+@keyframes kbC{from{transform:scale(1.06) translate(1.2%,0)}to{transform:scale(1.16) translate(-1.2%,-1.2%)}}
+.photo::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(180deg,rgba(5,10,25,.28) 0%,transparent 26%,transparent 62%,rgba(5,10,25,.62) 100%),
+  linear-gradient(90deg,rgba(5,10,25,.30),transparent 40%)}
+.split:not(.rev) .photo::after{background:
+  linear-gradient(180deg,rgba(5,10,25,.28) 0%,transparent 26%,transparent 62%,rgba(5,10,25,.62) 100%),
+  linear-gradient(270deg,rgba(5,10,25,.30),transparent 40%)}
+.bignum{position:absolute;top:clamp(1rem,3vw,2.2rem);left:clamp(1.2rem,3vw,2.4rem);
+  font-family:var(--serif);font-weight:300;font-size:clamp(4.5rem,10vw,9.5rem);line-height:.8;color:transparent;
+  -webkit-text-stroke:1px rgba(230,207,138,.42);letter-spacing:.02em;pointer-events:none}
+.split.rev .bignum{left:auto;right:clamp(1.2rem,3vw,2.4rem)}
+.cap{position:absolute;bottom:clamp(1.1rem,2.6vw,2rem);left:clamp(1.3rem,3vw,2.4rem);
+  font-size:.66rem;letter-spacing:.28em;text-transform:uppercase;color:rgba(243,236,223,.82);
+  display:flex;align-items:center;gap:.7em;text-shadow:0 1px 6px rgba(4,8,20,.7)}
+.split.rev .cap{left:auto;right:clamp(1.3rem,3vw,2.4rem)}
+.cap::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold)}
+.text{background:radial-gradient(120% 90% at 30% 15%,rgba(20,32,66,.55),transparent 60%),
+  linear-gradient(160deg,var(--night) 0%,var(--night-2) 100%);display:flex;align-items:center;
+  padding:clamp(3.5rem,7vw,6rem) var(--pad);position:relative}
+.split:not(.rev) .text{border-left:1px solid var(--gold-hair)}
+.split.rev .text{border-right:1px solid var(--gold-hair)}
+.copy{max-width:34rem;width:100%}
+
+/* ============ TYPE ============ */
+.kicker{display:inline-flex;align-items:center;gap:.9em;font-size:.72rem;font-weight:600;letter-spacing:.32em;
+  text-transform:uppercase;color:var(--gold-2);margin-bottom:1.5rem}
+.kicker::before{content:"";width:34px;height:1px;background:linear-gradient(90deg,var(--gold),transparent)}
+.marker{font-family:var(--serif);font-size:.95rem;letter-spacing:.35em;color:var(--gold);margin-bottom:1.1rem;font-variant-numeric:tabular-nums}
+.marker .slash{opacity:.45;margin:0 .35em}.marker .tot{color:var(--muted-2)}
+h1,h2{font-family:var(--serif);font-weight:400;line-height:1.02;letter-spacing:.005em;color:#fbf6ec}
+.title-xl{font-size:clamp(4.2rem,13vw,10rem);line-height:.9;font-weight:300}
+.title-lg{font-size:clamp(2.4rem,4.6vw,4.2rem)}
+.title-md{font-size:clamp(2rem,3.6vw,3.2rem)}
+.subtitle{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(1.4rem,2.4vw,2rem);color:var(--gold-2);margin-top:.4rem}
+.lede{color:var(--muted);font-size:clamp(1rem,1.25vw,1.15rem);font-weight:300;margin-top:1.6rem;max-width:30rem}
+.body{color:var(--muted);font-weight:300;margin-top:1.4rem;max-width:31rem;font-size:1.03rem}
+.hr{width:56px;height:1px;background:var(--gold);margin:1.7rem 0;opacity:.8}
+.note{color:var(--muted-2);font-weight:300;font-size:.9rem;margin-top:1.3rem;letter-spacing:.02em}
+
+/* ============ REVEAL ============ */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity 1s var(--ease),transform 1s var(--ease);transition-delay:var(--d,0s)}
+.in .reveal,.reveal.in{opacity:1;transform:none}
+
+/* ============ SUMMARY (Parigi) ============ */
+.summary{background:linear-gradient(180deg,var(--night-2),var(--night) 50%,var(--night-2));
+  padding:clamp(4rem,9vh,8rem) var(--pad);min-height:100vh;display:flex;flex-direction:column;justify-content:center;
+  border-top:1px solid var(--gold-hair);border-bottom:1px solid var(--gold-hair)}
+.summary .head{max-width:60rem;margin:0 auto 2.8rem;text-align:center}
+.summary .head .kicker{justify-content:center}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(.7rem,1.2vw,1.2rem);max-width:1500px;margin:0 auto;width:100%}
+.card{position:relative;min-height:clamp(20rem,58vh,32rem);overflow:hidden;border:1px solid var(--gold-hair);
+  background:var(--night-3);display:flex;align-items:flex-end}
+.card .ph{position:absolute;inset:0;background-size:cover;background-position:center;transform:scale(1.02);
+  transition:transform 1.4s var(--ease),filter 1.4s var(--ease);filter:saturate(.94) brightness(.82)}
+.card::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(180deg,rgba(5,10,25,.15) 0%,transparent 30%,rgba(5,10,25,.55) 62%,rgba(5,10,25,.9) 100%)}
+.card:hover .ph{transform:scale(1.09);filter:saturate(1.02) brightness(.9)}
+.card .info{position:relative;z-index:2;padding:1.5rem 1.4rem 1.6rem}
+.card .day{font-size:.68rem;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-2);display:block;margin-bottom:.55rem}
+.card .cname{font-family:var(--serif);font-size:1.55rem;line-height:1.05;color:#fbf6ec}
+.card .cdesc{color:var(--muted);font-size:.86rem;font-weight:300;margin-top:.5rem}
+.card .topline{position:absolute;top:0;left:0;height:2px;width:0;background:var(--gold);transition:width .7s var(--ease);z-index:3}
+.card:hover .topline{width:100%}
+
+/* ============ FLIGHT (Volo) ============ */
+.legs{margin-top:1.8rem;display:flex;flex-direction:column;gap:1.1rem}
+.leg{border:1px solid var(--gold-hair);border-radius:5px;padding:1.15rem 1.3rem;background:rgba(201,162,75,.045)}
+.leg .lg-top{display:flex;justify-content:space-between;align-items:baseline;gap:1rem}
+.leg .lg-when{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-2);font-weight:600}
+.leg .lg-time{font-family:var(--serif);color:var(--cream);font-size:1.1rem;font-variant-numeric:tabular-nums}
+.leg .route{display:flex;align-items:center;gap:.7rem;margin-top:.7rem}
+.leg .code{font-family:var(--serif);font-size:1.7rem;color:#fbf6ec;letter-spacing:.06em}
+.leg .line{flex:1;height:1px;background:linear-gradient(90deg,var(--gold-soft),var(--gold),var(--gold-soft));position:relative}
+.leg .plane{flex:0 0 auto;color:var(--gold-2)}
+.leg .plane svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;display:block}
+.leg .cities{display:flex;justify-content:space-between;color:var(--muted);font-size:.82rem;font-weight:300;margin-top:.35rem}
+
+/* ============ POINTS (Sicurezza / Spostamenti) ============ */
+.points{margin-top:1.8rem;display:flex;flex-direction:column;gap:1.4rem}
+.pt{display:flex;gap:1.1rem;align-items:flex-start}
+.pt .ic{flex:0 0 auto;width:46px;height:46px;border:1px solid var(--gold-soft);border-radius:50%;
+  display:grid;place-items:center;color:var(--gold-2);background:rgba(201,162,75,.05)}
+.pt .ic svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.3;stroke-linecap:round;stroke-linejoin:round}
+.pt .ph{font-family:var(--serif);font-size:1.3rem;color:#fbf6ec;line-height:1.1}
+.pt .pd{color:var(--muted);font-weight:300;font-size:.94rem;margin-top:.2rem}
+
+/* hotel chips */
+.chips{display:flex;flex-wrap:wrap;gap:.55rem;margin-top:1.6rem}
+.chip{font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-2);
+  border:1px solid var(--gold-hair);padding:.5em .9em;border-radius:2em;font-weight:500}
+
+/* ============ HOTEL (full-width, foto intera + mappa) ============ */
+.hotel{background:linear-gradient(180deg,var(--night-2),var(--night) 50%,var(--night-2));
+  min-height:100vh;display:flex;align-items:center;padding:clamp(3.5rem,8vh,6.5rem) var(--pad);
+  border-top:1px solid var(--gold-hair);border-bottom:1px solid var(--gold-hair)}
+.hotel-inner{max-width:1180px;margin:0 auto;width:100%;position:relative}
+.hotel-head{max-width:52rem;margin-bottom:2.1rem}
+.hotel-head .body{margin-top:1.1rem}
+.hotel-show{display:grid;grid-template-columns:1.6fr 1fr;gap:1rem;align-items:start}
+.hotel-show figure{position:relative;overflow:hidden;border:1px solid var(--gold-hair);border-radius:6px;background:var(--night-3);margin:0}
+.hotel-show img{display:block;width:100%;height:auto}
+.hotel-show figcaption{position:absolute;left:0;right:0;bottom:0;padding:.85rem 1rem .7rem;z-index:2;
+  font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:#fff;
+  background:linear-gradient(0deg,rgba(4,8,20,.85),transparent)}
+.hotel-side{display:flex;flex-direction:column;gap:1rem}
+.hotel-mini{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.hotel-mini img{aspect-ratio:4/3;object-fit:cover;transition:transform 1s var(--ease)}
+.hotel-mini figure:hover img{transform:scale(1.06)}
+@media (max-width:900px){.hotel-show{grid-template-columns:1fr}.hotel{min-height:auto}}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width:900px){
+  .split{grid-template-columns:1fr;min-height:auto}
+  .split .photo{order:0!important;min-height:56vh}
+  .split .text{order:1!important;border:0!important;border-top:1px solid var(--gold-hair)!important;min-height:auto}
+  .split:not(.rev) .text,.split.rev .text{border-left:0;border-right:0}
+  .index{display:none}
+  .summary{min-height:auto}
+  .cards{grid-template-columns:1fr 1fr}
+  .title-xl{font-size:clamp(4rem,20vw,7rem)}
+}
+@media (max-width:560px){.cards{grid-template-columns:1fr}.card{min-height:44vh}.split .photo{min-height:48vh}}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}.photo .kb{animation:none!important;inset:0}
+  .reveal{transition:none;opacity:1;transform:none}.card .ph{transition:none}.progress{transition:none}
+}
+</style>
+</head>
+<body>
+
+<div class="progress" id="progress"></div>
+<div class="vignette"></div>
+<div class="grain"></div>
+
+<nav class="index" aria-label="Indice del viaggio">
+  <a href="#sec-1"><span class="n">01</span><span class="nm">Copertina</span></a>
+  <a href="#sec-2"><span class="n">02</span><span class="nm">Parigi</span></a>
+  <a href="#sec-3"><span class="n">03</span><span class="nm">Il volo</span></a>
+  <a href="#sec-4"><span class="n">04</span><span class="nm">Dove dormiamo</span></a>
+  <a href="#sec-5"><span class="n">05</span><span class="nm">Come ci spostiamo</span></a>
+  <a href="#sec-6"><span class="n">06</span><span class="nm">Reperibilità</span></a>
+  <a href="#sec-7"><span class="n">07</span><span class="nm">Bon voyage</span></a>
+</nav>
+
+<main>
+
+  <!-- 01 HERO -->
+  <section class="split rev kb-a" id="sec-1" data-index="0">
+    <div class="pane photo" style="--img:url(assets/img/eiffel-night.jpg)">
+      <div class="kb"></div><span class="bignum">01</span><span class="cap">Tour Eiffel · La nuit</span>
+    </div>
+    <div class="pane text"><div class="copy">
+      <div class="marker reveal">01<span class="slash">/</span><span class="tot">07</span></div>
+      <p class="kicker reveal" style="--d:.08s">5 — 8 novembre 2026</p>
+      <h1 class="title-xl reveal" style="--d:.16s">Paris</h1>
+      <p class="subtitle reveal" style="--d:.26s">per i diciott'anni di Adiel</p>
+      <p class="lede reveal" style="--d:.36s">Tre giorni tra arte, luci e romanticismo, nella Ville Lumière.</p>
+    </div></div>
+  </section>
+
+  <!-- 02 PARIGI — highlight dei luoghi -->
+  <section class="summary" id="sec-2" data-index="1">
+    <div class="head reveal">
+      <p class="kicker">Dove andiamo</p>
+      <h2 class="title-md">Parigi, la Ville Lumière</h2>
+    </div>
+    <div class="cards">
+      <article class="card reveal" style="--d:0s"><span class="topline"></span>
+        <div class="ph" style="background-image:url(assets/img/eiffel-day.jpg)"></div>
+        <div class="info"><span class="day">Il simbolo</span><h3 class="cname">La Torre Eiffel</h3>
+          <p class="cdesc">Di giorno e quando si accende, la sera.</p></div>
+      </article>
+      <article class="card reveal" style="--d:.1s"><span class="topline"></span>
+        <div class="ph" style="background-image:url(assets/img/louvre.jpg)"></div>
+        <div class="info"><span class="day">L'arte</span><h3 class="cname">Il Louvre</h3>
+          <p class="cdesc">I capolavori e l'Arc de Triomphe.</p></div>
+      </article>
+      <article class="card reveal" style="--d:.2s"><span class="topline"></span>
+        <div class="ph" style="background-image:url(assets/img/sacre-coeur.jpg)"></div>
+        <div class="info"><span class="day">I quartieri</span><h3 class="cname">Montmartre</h3>
+          <p class="cdesc">La collina bohémien e il Sacré-Cœur.</p></div>
+      </article>
+      <article class="card reveal" style="--d:.3s"><span class="topline"></span>
+        <div class="ph" style="background-image:url(assets/img/notre-dame.jpg)"></div>
+        <div class="info"><span class="day">Storia & Senna</span><h3 class="cname">Notre-Dame</h3>
+          <p class="cdesc">L'Île de la Cité e le rive del fiume.</p></div>
+      </article>
+    </div>
+  </section>
+
+  <!-- 03 IL VOLO -->
+  <section class="split kb-c" id="sec-3" data-index="2">
+    <div class="pane photo" style="--img:url(assets/img/arc-triomphe.jpg)">
+      <div class="kb"></div><span class="bignum">03</span><span class="cap">Arc de Triomphe</span>
+    </div>
+    <div class="pane text"><div class="copy">
+      <div class="marker reveal">03<span class="slash">/</span><span class="tot">07</span></div>
+      <p class="kicker reveal" style="--d:.08s">Il volo</p>
+      <h2 class="title-lg reveal" style="--d:.16s">Da Catania a Parigi</h2>
+      <div class="legs">
+        <div class="leg reveal" style="--d:.24s">
+          <div class="lg-top"><span class="lg-when">Andata · Giovedì 5</span><span class="lg-time">12:00 → 14:20</span></div>
+          <div class="route"><span class="code">CTA</span><span class="line"></span>
+            <span class="plane"><svg viewBox="0 0 24 24"><path d="M2 13.5l19-6.5-6 15-3.5-5.5L2 13.5z"/><path d="M11.5 16.5L11 21l2.5-3"/></svg></span>
+            <span class="line"></span><span class="code">ORY</span></div>
+          <div class="cities"><span>Catania</span><span>Paris Orly</span></div>
+        </div>
+        <div class="leg reveal" style="--d:.34s">
+          <div class="lg-top"><span class="lg-when">Ritorno · Domenica 8</span><span class="lg-time">sera · ~22:15</span></div>
+          <div class="route"><span class="code">BVA</span><span class="line"></span>
+            <span class="plane"><svg viewBox="0 0 24 24"><path d="M2 13.5l19-6.5-6 15-3.5-5.5L2 13.5z"/><path d="M11.5 16.5L11 21l2.5-3"/></svg></span>
+            <span class="line"></span><span class="code">CTA</span></div>
+          <div class="cities"><span>Paris Beauvais</span><span>Catania</span></div>
+        </div>
+      </div>
+      <p class="note reveal" style="--d:.44s">Volo prenotato con eDreams.</p>
+    </div></div>
+  </section>
+
+  <!-- 04 DOVE DORMIAMO -->
+  <section class="hotel" id="sec-4" data-index="3">
+    <div class="hotel-inner">
+      <div class="hotel-head">
+        <div class="marker reveal">04<span class="slash">/</span><span class="tot">07</span></div>
+        <p class="kicker reveal" style="--d:.06s">Dove dormiamo</p>
+        <h2 class="title-md reveal" style="--d:.14s">Ibis Paris Tour Eiffel Cambronne 15ᵉ</h2>
+        <p class="body reveal" style="--d:.22s">Camera con vista sulla Torre Eiffel, quartiere tranquillo e la Torre a due passi. La base perfetta per muoversi sicuri e comodi.</p>
+        <div class="chips reveal" style="--d:.3s">
+          <span class="chip">15ᵉ arrondissement</span><span class="chip">Vista Torre Eiffel</span><span class="chip">Zona tranquilla</span>
+        </div>
+      </div>
+      <div class="hotel-show">
+        <figure class="reveal" style="--d:.16s">
+          <img src="assets/img/hotel-1.jpg" alt="Camera con vista sulla Torre Eiffel">
+          <figcaption>Camera · vista Torre Eiffel</figcaption>
+        </figure>
+        <div class="hotel-side">
+          <figure class="reveal" style="--d:.26s">
+            <img src="assets/img/hotel-map.jpg" alt="Posizione: Torre Eiffel e Hôtel Ibis nel 15º arrondissement">
+            <figcaption>La posizione · 15ᵉ, Rue Cambronne</figcaption>
+          </figure>
+          <div class="hotel-mini">
+            <figure class="reveal" style="--d:.34s"><img src="assets/img/hotel-2.jpg" alt="La camera"></figure>
+            <figure class="reveal" style="--d:.4s"><img src="assets/img/hotel-3.jpg" alt="Il bagno"></figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 COME CI SPOSTIAMO -->
+  <section class="split kb-b" id="sec-5" data-index="4">
+    <div class="pane photo" style="--img:url(assets/img/louvre-night.jpg)">
+      <div class="kb"></div><span class="bignum">05</span><span class="cap">Paris · La nuit</span>
+    </div>
+    <div class="pane text"><div class="copy">
+      <div class="marker reveal">05<span class="slash">/</span><span class="tot">07</span></div>
+      <p class="kicker reveal" style="--d:.08s">Come ci spostiamo</p>
+      <h2 class="title-lg reveal" style="--d:.16s">Semplice, in ogni momento</h2>
+      <div class="points">
+        <div class="pt reveal" style="--d:.24s">
+          <div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 12l1.6-4.2A2.2 2.2 0 0 1 7.7 6.3h8.6a2.2 2.2 0 0 1 2.1 1.5L20 12"/><rect x="3" y="12" width="18" height="5" rx="1.5"/><circle cx="7.5" cy="17" r="1.4"/><circle cx="16.5" cy="17" r="1.4"/></svg></div>
+          <div><div class="ph">Da e per l'aeroporto</div><div class="pd">In Uber: comodo e porta-a-porta, anche con i bagagli.</div></div>
+        </div>
+        <div class="pt reveal" style="--d:.34s">
+          <div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="5" y="3.5" width="14" height="14" rx="3"/><path d="M5 12h14"/><circle cx="8.5" cy="14.7" r="1"/><circle cx="15.5" cy="14.7" r="1"/><path d="M8 17.5l-2 3M16 17.5l2 3"/></svg></div>
+          <div><div class="ph">In città</div><div class="pd">Uber o metro, a seconda di dove dobbiamo andare.</div></div>
+        </div>
+      </div>
+    </div></div>
+  </section>
+
+  <!-- 06 SICUREZZA & REPERIBILITÀ -->
+  <section class="split rev kb-c" id="sec-6" data-index="5">
+    <div class="pane photo" style="--img:url(assets/img/montmartre.jpg)">
+      <div class="kb"></div><span class="bignum">06</span><span class="cap">Montmartre · Le quartier</span>
+    </div>
+    <div class="pane text"><div class="copy">
+      <div class="marker reveal">06<span class="slash">/</span><span class="tot">07</span></div>
+      <p class="kicker reveal" style="--d:.08s">Sicurezza &amp; reperibilità</p>
+      <h2 class="title-lg reveal" style="--d:.16s">Tranquilli. A ogni ora.</h2>
+      <div class="points">
+        <div class="pt reveal" style="--d:.24s">
+          <div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21.5s-6.8-6-6.8-11a6.8 6.8 0 0 1 13.6 0c0 5-6.8 11-6.8 11Z"/><circle cx="12" cy="10.3" r="2.5"/></svg></div>
+          <div><div class="ph">Zona tranquilla</div><div class="pd">Hotel nel 15º arrondissement, quartiere residenziale e sereno, a pochi minuti dalla Torre.</div></div>
+        </div>
+        <div class="pt reveal" style="--d:.32s">
+          <div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6.4 3.8h3l1.4 3.9-2 1.4a11 11 0 0 0 5.6 5.6l1.4-2 3.9 1.4v3a2 2 0 0 1-2.2 2A16 16 0 0 1 4.4 6.2 2 2 0 0 1 6.4 3.8Z"/><path d="M15.2 4.3a5 5 0 0 1 4.5 4.5"/></svg></div>
+          <div><div class="ph">Sempre reperibili</div><div class="pd">Telefono attivo, posizione condivisa e un check-in con voi ogni giorno.</div></div>
+        </div>
+        <div class="pt reveal" style="--d:.4s">
+          <div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.1"/><path d="M3.6 19.5a5.4 5.4 0 0 1 10.8 0"/><path d="M15.8 5.2a3.2 3.2 0 0 1 0 5.7"/><path d="M17.3 14.5a5.4 5.4 0 0 1 3.1 4.9"/></svg></div>
+          <div><div class="ph">Sempre insieme</div><div class="pd">Ci muoviamo sempre insieme, con orari sereni e rientri organizzati.</div></div>
+        </div>
+      </div>
+    </div></div>
+  </section>
+
+  <!-- 07 CHIUSURA -->
+  <section class="split kb-a" id="sec-7" data-index="6">
+    <div class="pane photo" style="--img:url(assets/img/eiffel-night.jpg)">
+      <div class="kb"></div><span class="bignum">07</span><span class="cap">Paris · À bientôt</span>
+    </div>
+    <div class="pane text"><div class="copy">
+      <div class="marker reveal">07<span class="slash">/</span><span class="tot">07</span></div>
+      <p class="kicker reveal" style="--d:.08s">Parigi ci aspetta</p>
+      <h2 class="title-xl reveal" style="--d:.16s">Bon voyage</h2>
+      <p class="lede reveal" style="--d:.28s">Un ricordo che resterà per sempre.</p>
+    </div></div>
+  </section>
+
+</main>
+
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var progress = document.getElementById('progress');
+  function onScroll(){
+    var h=document.documentElement, max=h.scrollHeight-h.clientHeight;
+    var p=max>0?(h.scrollTop||document.body.scrollTop)/max:0;
+    progress.style.width=(p*100).toFixed(2)+'%';
+  }
+  window.addEventListener('scroll',onScroll,{passive:true}); onScroll();
+
+  if(!reduce && 'IntersectionObserver' in window){
+    var rObs=new IntersectionObserver(function(en){en.forEach(function(e){
+      if(e.isIntersecting){e.target.classList.add('in');rObs.unobserve(e.target);}});
+    },{threshold:0.16,rootMargin:'0px 0px -8% 0px'});
+    document.querySelectorAll('.reveal').forEach(function(el){rObs.observe(el);});
+  } else { document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in');}); }
+
+  var links=[].slice.call(document.querySelectorAll('.index a'));
+  var sections=[].slice.call(document.querySelectorAll('section[data-index]'));
+  function setActive(i){links.forEach(function(l,k){l.classList.toggle('active',k===i);});}
+  if('IntersectionObserver' in window){
+    var visible={};
+    var sObs=new IntersectionObserver(function(en){
+      en.forEach(function(e){var idx=+e.target.getAttribute('data-index');visible[idx]=e.isIntersecting?e.intersectionRatio:0;});
+      var best=-1,bestR=0;Object.keys(visible).forEach(function(k){if(visible[k]>bestR){bestR=visible[k];best=+k;}});
+      if(best>=0)setActive(best);
+    },{threshold:[0.25,0.5,0.75],rootMargin:'-15% 0px -15% 0px'});
+    sections.forEach(function(s){sObs.observe(s);});
+  }
+  setActive(0);
+})();
+</script>
+</body>
+</html>
