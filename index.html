@@ -7,7 +7,7 @@
     <title>Parigi — il nostro viaggio · 5–9 novembre 2026</title>
     <meta
       name="description"
-      content="Planner del viaggio a Parigi: le tappe per zona, il volo, l'hotel, come ci muoviamo, gli ingressi gratis e le cose da ricordare."
+      content="Planner del viaggio a Parigi: le tappe per zona, il volo, come ci muoviamo, gli ingressi gratis e le cose da ricordare."
     />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -428,115 +428,6 @@
         transform: none;
       }
 
-      /* ============ SUMMARY (colpo d'occhio) ============ */
-      .summary {
-        background: linear-gradient(
-          180deg,
-          var(--night-2),
-          var(--night) 50%,
-          var(--night-2)
-        );
-        padding: clamp(4rem, 9vh, 8rem) var(--pad);
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        border-top: 1px solid var(--gold-hair);
-        border-bottom: 1px solid var(--gold-hair);
-      }
-      .summary .head {
-        max-width: 60rem;
-        margin: 0 auto 2.8rem;
-        text-align: center;
-      }
-      .summary .head .kicker {
-        justify-content: center;
-      }
-      .cards {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: clamp(0.7rem, 1.2vw, 1.2rem);
-        max-width: 1500px;
-        margin: 0 auto;
-        width: 100%;
-      }
-      .card {
-        position: relative;
-        min-height: clamp(20rem, 58vh, 32rem);
-        overflow: hidden;
-        border: 1px solid var(--gold-hair);
-        background: var(--night-3);
-        display: flex;
-        align-items: flex-end;
-      }
-      .card .ph {
-        position: absolute;
-        inset: 0;
-        background-size: cover;
-        background-position: center;
-        transform: scale(1.02);
-        transition:
-          transform 1.4s var(--ease),
-          filter 1.4s var(--ease);
-        filter: saturate(0.94) brightness(0.82);
-      }
-      .card::after {
-        content: "";
-        position: absolute;
-        inset: 0;
-        pointer-events: none;
-        background: linear-gradient(
-          180deg,
-          rgba(5, 10, 25, 0.15) 0%,
-          transparent 30%,
-          rgba(5, 10, 25, 0.55) 62%,
-          rgba(5, 10, 25, 0.9) 100%
-        );
-      }
-      .card:hover .ph {
-        transform: scale(1.09);
-        filter: saturate(1.02) brightness(0.9);
-      }
-      .card .info {
-        position: relative;
-        z-index: 2;
-        padding: 1.5rem 1.4rem 1.6rem;
-      }
-      .card .day {
-        font-size: 0.68rem;
-        font-weight: 600;
-        letter-spacing: 0.24em;
-        text-transform: uppercase;
-        color: var(--gold-2);
-        display: block;
-        margin-bottom: 0.55rem;
-      }
-      .card .cname {
-        font-family: var(--serif);
-        font-size: 1.55rem;
-        line-height: 1.05;
-        color: #fbf6ec;
-      }
-      .card .cdesc {
-        color: var(--muted);
-        font-size: 0.86rem;
-        font-weight: 300;
-        margin-top: 0.5rem;
-      }
-      .card .topline {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 2px;
-        width: 0;
-        background: var(--gold);
-        transition: width 0.7s var(--ease);
-        z-index: 3;
-      }
-      .card:hover .topline {
-        width: 100%;
-      }
-
       /* ============ FLIGHT (Volo) ============ */
       .legs {
         margin-top: 1.8rem;
@@ -668,119 +559,6 @@
       .pt .pd .fr {
         font-style: italic;
         color: var(--gold-2);
-      }
-
-      /* hotel chips */
-      .chips {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.55rem;
-        margin-top: 1.6rem;
-      }
-      .chip {
-        font-size: 0.68rem;
-        letter-spacing: 0.16em;
-        text-transform: uppercase;
-        color: var(--gold-2);
-        border: 1px solid var(--gold-hair);
-        padding: 0.5em 0.9em;
-        border-radius: 2em;
-        font-weight: 500;
-      }
-
-      /* ============ HOTEL (full-width, foto intera + mappa) ============ */
-      .hotel {
-        background: linear-gradient(
-          180deg,
-          var(--night-2),
-          var(--night) 50%,
-          var(--night-2)
-        );
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
-        padding: clamp(3.5rem, 8vh, 6.5rem) var(--pad);
-        border-top: 1px solid var(--gold-hair);
-        border-bottom: 1px solid var(--gold-hair);
-      }
-      .hotel-inner {
-        max-width: 1180px;
-        margin: 0 auto;
-        width: 100%;
-        position: relative;
-      }
-      .hotel-head {
-        max-width: 52rem;
-        margin-bottom: 2.1rem;
-      }
-      .hotel-head .body {
-        margin-top: 1.1rem;
-      }
-      .hotel-show {
-        display: grid;
-        grid-template-columns: 1.6fr 1fr;
-        gap: 1rem;
-        align-items: start;
-      }
-      .hotel-show figure {
-        position: relative;
-        overflow: hidden;
-        border: 1px solid var(--gold-hair);
-        border-radius: 6px;
-        background: var(--night-3);
-        margin: 0;
-      }
-      .hotel-show img {
-        display: block;
-        width: 100%;
-        height: auto;
-      }
-      .hotel-show figcaption {
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        padding: 0.85rem 1rem 0.7rem;
-        z-index: 2;
-        font-size: 0.62rem;
-        letter-spacing: 0.2em;
-        text-transform: uppercase;
-        color: #fff;
-        background: linear-gradient(0deg, rgba(4, 8, 20, 0.85), transparent);
-      }
-      .hotel-side {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-      }
-      .hotel-mini {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 1rem;
-      }
-      .hotel-mini img {
-        aspect-ratio: 4/3;
-        object-fit: cover;
-        transition: transform 1s var(--ease);
-      }
-      .hotel-mini figure:hover img {
-        transform: scale(1.06);
-      }
-      /* Su desktop lascia spazio a destra per l'indice laterale (numeri) */
-      @media (min-width: 901px) {
-        .summary,
-        .plan,
-        .duo {
-          padding-right: calc(var(--pad) + 2.6rem);
-        }
-      }
-      @media (max-width: 900px) {
-        .hotel-show {
-          grid-template-columns: 1fr;
-        }
-        .hotel {
-          min-height: auto;
-        }
       }
 
       /* ============ PLAN (Cosa visitare — tappe per zona) ============ */
@@ -991,6 +769,13 @@
       }
 
       /* ============ RESPONSIVE ============ */
+      /* Su desktop lascia spazio a destra per l'indice laterale (numeri) */
+      @media (min-width: 901px) {
+        .plan,
+        .duo {
+          padding-right: calc(var(--pad) + 2.6rem);
+        }
+      }
       @media (max-width: 900px) {
         .split {
           grid-template-columns: 1fr;
@@ -1014,23 +799,11 @@
         .index {
           display: none;
         }
-        .summary {
-          min-height: auto;
-        }
-        .cards {
-          grid-template-columns: 1fr 1fr;
-        }
         .title-xl {
           font-size: clamp(4rem, 20vw, 7rem);
         }
       }
       @media (max-width: 560px) {
-        .cards {
-          grid-template-columns: 1fr;
-        }
-        .card {
-          min-height: 44vh;
-        }
         .split .photo {
           min-height: 48vh;
         }
@@ -1048,9 +821,6 @@
           opacity: 1;
           transform: none;
         }
-        .card .ph {
-          transition: none;
-        }
         .progress {
           transition: none;
         }
@@ -1067,34 +837,28 @@
         ><span class="n">01</span><span class="nm">Copertina</span></a
       >
       <a href="#sec-2"
-        ><span class="n">02</span><span class="nm">Le tappe</span></a
+        ><span class="n">02</span><span class="nm">Il volo</span></a
       >
       <a href="#sec-3"
-        ><span class="n">03</span><span class="nm">Il volo</span></a
+        ><span class="n">03</span><span class="nm">Come mi muovo</span></a
       >
       <a href="#sec-4"
-        ><span class="n">04</span><span class="nm">Dove dormo</span></a
+        ><span class="n">04</span><span class="nm">Cosa visitare</span></a
       >
       <a href="#sec-5"
-        ><span class="n">05</span><span class="nm">Come mi muovo</span></a
+        ><span class="n">05</span><span class="nm">Ingressi gratis</span></a
       >
       <a href="#sec-6"
-        ><span class="n">06</span><span class="nm">Cosa visitare</span></a
+        ><span class="n">06</span><span class="nm">Quartieri</span></a
       >
       <a href="#sec-7"
-        ><span class="n">07</span><span class="nm">Ingressi gratis</span></a
+        ><span class="n">07</span><span class="nm">Da ricordare</span></a
       >
       <a href="#sec-8"
-        ><span class="n">08</span><span class="nm">Quartieri</span></a
+        ><span class="n">08</span><span class="nm">Note pratiche</span></a
       >
       <a href="#sec-9"
-        ><span class="n">09</span><span class="nm">Da ricordare</span></a
-      >
-      <a href="#sec-10"
-        ><span class="n">10</span><span class="nm">Note pratiche</span></a
-      >
-      <a href="#sec-11"
-        ><span class="n">11</span><span class="nm">Bon voyage</span></a
+        ><span class="n">09</span><span class="nm">Bon voyage</span></a
       >
     </nav>
 
@@ -1109,7 +873,7 @@
         <div class="pane text">
           <div class="copy">
             <div class="marker reveal">
-              01<span class="slash">/</span><span class="tot">11</span>
+              01<span class="slash">/</span><span class="tot">09</span>
             </div>
             <p class="kicker reveal" style="--d: 0.08s">5 — 9 novembre 2026</p>
             <h1 class="title-xl reveal" style="--d: 0.16s">Paris</h1>
@@ -1122,76 +886,16 @@
         </div>
       </section>
 
-      <!-- 02 LE TAPPE A COLPO D'OCCHIO -->
-      <section class="summary" id="sec-2" data-index="1">
-        <div class="head reveal">
-          <p class="kicker">A colpo d'occhio</p>
-          <h2 class="title-md">Le quattro zone</h2>
-        </div>
-        <div class="cards">
-          <article class="card reveal" style="--d: 0s">
-            <span class="topline"></span>
-            <div
-              class="ph"
-              style="background-image: url(assets/img/eiffel-day.jpg)"
-            ></div>
-            <div class="info">
-              <span class="day">Zona 1</span>
-              <h3 class="cname">Eiffel &amp; Senna</h3>
-              <p class="cdesc">
-                La Torre, il Champ-de-Mars, la crociera serale.
-              </p>
-            </div>
-          </article>
-          <article class="card reveal" style="--d: 0.1s">
-            <span class="topline"></span>
-            <div
-              class="ph"
-              style="background-image: url(assets/img/louvre.jpg)"
-            ></div>
-            <div class="info">
-              <span class="day">Zona 2</span>
-              <h3 class="cname">L'asse dell'arte</h3>
-              <p class="cdesc">Grand Palais, Louvre e Arc de Triomphe.</p>
-            </div>
-          </article>
-          <article class="card reveal" style="--d: 0.2s">
-            <span class="topline"></span>
-            <div
-              class="ph"
-              style="background-image: url(assets/img/sacre-coeur.jpg)"
-            ></div>
-            <div class="info">
-              <span class="day">Zona 3</span>
-              <h3 class="cname">Montmartre &amp; Opéra</h3>
-              <p class="cdesc">Sacré-Cœur, Garnier e Galeries Lafayette.</p>
-            </div>
-          </article>
-          <article class="card reveal" style="--d: 0.3s">
-            <span class="topline"></span>
-            <div
-              class="ph"
-              style="background-image: url(assets/img/notre-dame.jpg)"
-            ></div>
-            <div class="info">
-              <span class="day">Zona 4</span>
-              <h3 class="cname">Île &amp; Rive Gauche</h3>
-              <p class="cdesc">Notre-Dame, Le Marais e Saint-Germain.</p>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <!-- 03 IL VOLO -->
-      <section class="split kb-c" id="sec-3" data-index="2">
+      <!-- 02 IL VOLO -->
+      <section class="split kb-c" id="sec-2" data-index="1">
         <div class="pane photo" style="--img: url(assets/img/arc-triomphe.jpg)">
           <div class="kb"></div>
-          <span class="bignum">03</span><span class="cap">Arc de Triomphe</span>
+          <span class="bignum">02</span><span class="cap">Arc de Triomphe</span>
         </div>
         <div class="pane text">
           <div class="copy">
             <div class="marker reveal">
-              03<span class="slash">/</span><span class="tot">11</span>
+              02<span class="slash">/</span><span class="tot">09</span>
             </div>
             <p class="kicker reveal" style="--d: 0.08s">Il volo</p>
             <h2 class="title-lg reveal" style="--d: 0.16s">
@@ -1242,67 +946,17 @@
         </div>
       </section>
 
-      <!-- 04 DOVE DORMO -->
-      <section class="hotel" id="sec-4" data-index="3">
-        <div class="hotel-inner">
-          <div class="hotel-head">
-            <div class="marker reveal">
-              04<span class="slash">/</span><span class="tot">11</span>
-            </div>
-            <p class="kicker reveal" style="--d: 0.06s">Dove dormo</p>
-            <h2 class="title-md reveal" style="--d: 0.14s">
-              Ibis Paris Tour Eiffel Cambronne 15ᵉ
-            </h2>
-            <p class="body reveal" style="--d: 0.22s">
-              Camera con vista sulla Torre Eiffel, quartiere tranquillo e la
-              Torre a due passi. La base perfetta per muoversi comodi.
-            </p>
-            <div class="chips reveal" style="--d: 0.3s">
-              <span class="chip">15ᵉ arrondissement</span
-              ><span class="chip">Vista Torre Eiffel</span
-              ><span class="chip">Zona tranquilla</span>
-            </div>
-          </div>
-          <div class="hotel-show">
-            <figure class="reveal" style="--d: 0.16s">
-              <img
-                src="assets/img/hotel-1.jpg"
-                alt="Camera con vista sulla Torre Eiffel"
-              />
-              <figcaption>Camera · vista Torre Eiffel</figcaption>
-            </figure>
-            <div class="hotel-side">
-              <figure class="reveal" style="--d: 0.26s">
-                <img
-                  src="assets/img/hotel-map.jpg"
-                  alt="Posizione: Torre Eiffel e Hôtel Ibis nel 15º arrondissement"
-                />
-                <figcaption>La posizione · 15ᵉ, Rue Cambronne</figcaption>
-              </figure>
-              <div class="hotel-mini">
-                <figure class="reveal" style="--d: 0.34s">
-                  <img src="assets/img/hotel-2.jpg" alt="La camera" />
-                </figure>
-                <figure class="reveal" style="--d: 0.4s">
-                  <img src="assets/img/hotel-3.jpg" alt="Il bagno" />
-                </figure>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- 05 COME MI MUOVO -->
-      <section class="split kb-b" id="sec-5" data-index="4">
+      <!-- 03 COME MI MUOVO -->
+      <section class="split rev kb-b" id="sec-3" data-index="2">
         <div class="pane photo" style="--img: url(assets/img/seine.jpg)">
           <div class="kb"></div>
-          <span class="bignum">05</span
+          <span class="bignum">03</span
           ><span class="cap">La Seine · Bir-Hakeim</span>
         </div>
         <div class="pane text">
           <div class="copy">
             <div class="marker reveal">
-              05<span class="slash">/</span><span class="tot">11</span>
+              03<span class="slash">/</span><span class="tot">09</span>
             </div>
             <p class="kicker reveal" style="--d: 0.08s">Come mi muovo</p>
             <h2 class="title-lg reveal" style="--d: 0.16s">
@@ -1366,18 +1020,22 @@
         </div>
       </section>
 
-      <!-- 06 COSA VISITARE -->
-      <section class="plan" id="sec-6" data-index="5">
+      <!-- 04 COSA VISITARE -->
+      <section class="plan" id="sec-4" data-index="3">
         <div class="head reveal">
           <p class="kicker">Cosa visitare</p>
           <h2 class="title-md">Le tappe, zona per zona</h2>
         </div>
         <div class="zones">
           <article class="zone reveal" style="--d: 0s">
-            <div class="z-day">Zona 1</div>
-            <div class="z-name">Eiffel &amp; Senna</div>
-            <div class="z-sub">Torre al tramonto e crociera serale</div>
+            <div class="z-day">Zona 1 · ovest, 7ᵉ</div>
+            <div class="z-name">Eiffel &amp; Invalides</div>
+            <div class="z-sub">Torre, Invalides e la Senna — tutto vicino</div>
             <ul class="stops">
+              <li class="stop">
+                <span class="s-name">Hôtel des Invalides</span
+                ><span class="s-note">la tomba di Napoleone</span>
+              </li>
               <li class="stop">
                 <span class="s-name">Trocadéro &amp; Champ-de-Mars</span>
               </li>
@@ -1398,17 +1056,12 @@
             </ul>
           </article>
           <article class="zone reveal" style="--d: 0.1s">
-            <div class="z-day">Zona 2</div>
+            <div class="z-day">Zona 2 · da est a ovest</div>
             <div class="z-name">L'asse dell'arte</div>
-            <div class="z-sub">Dal Grand Palais all'Arc de Triomphe</div>
+            <div class="z-sub">
+              Dal Louvre all'Arc, tutto in fila sullo stesso asse
+            </div>
             <ul class="stops">
-              <li class="stop"><span class="s-name">Grand Palais</span></li>
-              <li class="stop">
-                <span class="s-name">Champs-Élysées &amp; Louis Vuitton</span
-                ><span class="s-note"
-                  >boutique vicino all'Arco del Trionfo</span
-                >
-              </li>
               <li class="stop">
                 <span class="s-name">Museo del Louvre</span
                 ><span class="s-time">9:30</span
@@ -1417,20 +1070,22 @@
               <li class="stop">
                 <span class="s-name">Tuileries &amp; Pont des Arts</span>
               </li>
+              <li class="stop"><span class="s-name">Grand Palais</span></li>
+              <li class="stop"><span class="s-name">Champs-Élysées</span></li>
+              <li class="stop">
+                <span class="s-name">Louis Vuitton</span
+                ><span class="s-note">al 101, proprio sotto l'Arco</span>
+              </li>
               <li class="stop">
                 <span class="s-name">Arc de Triomphe</span
                 ><span class="s-note">salita in cima al tramonto</span>
               </li>
-              <li class="stop">
-                <span class="s-name">Hôtel des Invalides</span
-                ><span class="s-note">la tomba di Napoleone</span>
-              </li>
             </ul>
           </article>
           <article class="zone reveal" style="--d: 0.2s">
-            <div class="z-day">Zona 3</div>
+            <div class="z-day">Zona 3 · da nord a sud</div>
             <div class="z-name">Montmartre &amp; Opéra</div>
-            <div class="z-sub">La collina bohémien e i Grands Boulevards</div>
+            <div class="z-sub">Da Montmartre giù verso i Grands Boulevards</div>
             <ul class="stops">
               <li class="stop">
                 <span class="s-name">Sacré-Cœur &amp; Place du Tertre</span>
@@ -1444,7 +1099,7 @@
               <li class="stop">
                 <span class="s-name">Galeries Lafayette Haussmann</span
                 ><span class="s-note"
-                  >vedere Parigi dall'alto (terrazza + cupola)</span
+                  >dietro l'Opéra · vedere Parigi dall'alto</span
                 >
               </li>
               <li class="stop">
@@ -1456,46 +1111,46 @@
             </ul>
           </article>
           <article class="zone reveal" style="--d: 0.3s">
-            <div class="z-day">Zona 4</div>
+            <div class="z-day">Zona 4 · attorno alla Senna</div>
             <div class="z-name">Île &amp; Rive Gauche</div>
-            <div class="z-sub">Notre-Dame, Le Marais, Saint-Germain</div>
+            <div class="z-sub">Le due isole e le rive, tutto raccolto</div>
             <ul class="stops">
+              <li class="stop">
+                <span class="s-name">Le Marais</span
+                ><span class="s-note"
+                  >Place des Vosges, falafel Rue des Rosiers</span
+                >
+              </li>
               <li class="stop">
                 <span class="s-name">Notre-Dame &amp; Île de la Cité</span>
               </li>
               <li class="stop">
                 <span class="s-name">Sainte-Chapelle</span
-                ><span class="s-note">le vetrate gotiche</span>
+                ><span class="s-note">le vetrate gotiche, a due passi</span>
               </li>
               <li class="stop">
-                <span class="s-name">Le Marais</span
-                ><span class="s-note"
-                  >falafel in Rue des Rosiers, Place des Vosges</span
-                >
+                <span class="s-name">Gelato Berthillon</span
+                ><span class="s-note">sull'Île Saint-Louis, accanto</span>
               </li>
               <li class="stop">
                 <span class="s-name">Saint-Germain &amp; Quartiere Latino</span
                 ><span class="s-note">Shakespeare &amp; Co, caffè storici</span>
-              </li>
-              <li class="stop">
-                <span class="s-name">Bonus: gelato Berthillon</span
-                ><span class="s-note">sull'Île Saint-Louis</span>
               </li>
             </ul>
           </article>
         </div>
       </section>
 
-      <!-- 07 INGRESSI GRATUITI -->
-      <section class="split rev kb-c" id="sec-7" data-index="6">
+      <!-- 05 INGRESSI GRATUITI -->
+      <section class="split rev kb-c" id="sec-5" data-index="4">
         <div class="pane photo" style="--img: url(assets/img/louvre.jpg)">
           <div class="kb"></div>
-          <span class="bignum">07</span><span class="cap">Le Louvre</span>
+          <span class="bignum">05</span><span class="cap">Le Louvre</span>
         </div>
         <div class="pane text">
           <div class="copy">
             <div class="marker reveal">
-              07<span class="slash">/</span><span class="tot">11</span>
+              05<span class="slash">/</span><span class="tot">09</span>
             </div>
             <p class="kicker reveal" style="--d: 0.08s">Ingressi gratuiti</p>
             <h2 class="title-lg reveal" style="--d: 0.16s">
@@ -1526,17 +1181,17 @@
         </div>
       </section>
 
-      <!-- 08 I QUARTIERI -->
-      <section class="split kb-b" id="sec-8" data-index="7">
+      <!-- 06 I QUARTIERI -->
+      <section class="split kb-b" id="sec-6" data-index="5">
         <div class="pane photo" style="--img: url(assets/img/montmartre.jpg)">
           <div class="kb"></div>
-          <span class="bignum">08</span
+          <span class="bignum">06</span
           ><span class="cap">Montmartre · Le quartier</span>
         </div>
         <div class="pane text">
           <div class="copy">
             <div class="marker reveal">
-              08<span class="slash">/</span><span class="tot">11</span>
+              06<span class="slash">/</span><span class="tot">09</span>
             </div>
             <p class="kicker reveal" style="--d: 0.08s">I quartieri</p>
             <h2 class="title-lg reveal" style="--d: 0.16s">
@@ -1576,20 +1231,20 @@
         </div>
       </section>
 
-      <!-- 09 DA RICORDARE -->
-      <section class="split rev kb-a" id="sec-9" data-index="8">
+      <!-- 07 DA RICORDARE -->
+      <section class="split rev kb-a" id="sec-7" data-index="6">
         <div
           class="pane photo"
           style="--img: url(assets/img/paris-rooftops.jpg)"
         >
           <div class="kb"></div>
-          <span class="bignum">09</span
+          <span class="bignum">07</span
           ><span class="cap">Paris · Les toits</span>
         </div>
         <div class="pane text">
           <div class="copy">
             <div class="marker reveal">
-              09<span class="slash">/</span><span class="tot">11</span>
+              07<span class="slash">/</span><span class="tot">09</span>
             </div>
             <p class="kicker reveal" style="--d: 0.08s">Da ricordare</p>
             <h2 class="title-lg reveal" style="--d: 0.16s">
@@ -1634,12 +1289,12 @@
         </div>
       </section>
 
-      <!-- 10 NOTE PRATICHE + PIANO B -->
-      <section class="duo" id="sec-10" data-index="9">
+      <!-- 08 NOTE PRATICHE + PIANO B -->
+      <section class="duo" id="sec-8" data-index="7">
         <div class="duo-inner">
           <div class="duo-head reveal">
             <div class="marker">
-              10<span class="slash">/</span><span class="tot">11</span>
+              08<span class="slash">/</span><span class="tot">09</span>
             </div>
             <p class="kicker">Buono a sapersi</p>
             <h2 class="title-md">Note pratiche &amp; piano B</h2>
@@ -1709,17 +1364,17 @@
         </div>
       </section>
 
-      <!-- 11 CHIUSURA -->
-      <section class="split kb-a" id="sec-11" data-index="10">
+      <!-- 09 CHIUSURA -->
+      <section class="split rev kb-a" id="sec-9" data-index="8">
         <div class="pane photo" style="--img: url(assets/img/eiffel-night.jpg)">
           <div class="kb"></div>
-          <span class="bignum">11</span
+          <span class="bignum">09</span
           ><span class="cap">Paris · À bientôt</span>
         </div>
         <div class="pane text">
           <div class="copy">
             <div class="marker reveal">
-              11<span class="slash">/</span><span class="tot">11</span>
+              09<span class="slash">/</span><span class="tot">09</span>
             </div>
             <p class="kicker reveal" style="--d: 0.08s">Parigi ci aspetta</p>
             <h2 class="title-xl reveal" style="--d: 0.16s">Bon voyage</h2>
